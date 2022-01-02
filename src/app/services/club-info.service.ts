@@ -11,4 +11,10 @@ export class ClubInfoService {
   getClubInfo(): ClubInfo {
     return CLUBINFO;
   }
+
+  addInfo(newInfo: ClubInfo): void {
+    CLUBINFO.clubName = newInfo.clubName;
+    CLUBINFO.clubEmail = newInfo.clubEmail;
+    CLUBINFO.clubID = newInfo.clubID;
+  }
 }
