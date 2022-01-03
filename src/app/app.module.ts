@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsComponent } from './components/forms/forms/forms.component';
 import { ClubInfoComponent } from './components/info/club-info/club-info.component';
 import { ClubInfoFormComponent } from './components/forms/club-info-form/club-info-form.component';
+import { FormButtonsComponent } from './components/forms/form-buttons/form-buttons.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ClubInfoFormComponent } from './components/forms/club-info-form/club-in
     FormsComponent,
     ClubInfoComponent,
     ClubInfoFormComponent,
+    FormButtonsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],

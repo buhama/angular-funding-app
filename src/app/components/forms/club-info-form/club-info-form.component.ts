@@ -14,6 +14,7 @@ export class ClubInfoFormComponent implements OnInit {
   clubEmail!: string;
   clubName!: string;
   clubID!: number;
+  showForm: boolean = true;
 
   constructor(private clubInfoService: ClubInfoService) {}
 
@@ -33,5 +34,7 @@ export class ClubInfoFormComponent implements OnInit {
     this.clubName = '';
     this.clubEmail = '';
     this.clubID = 0;
+
+    this.showForm = false;
   }
 }

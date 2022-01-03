@@ -8,6 +8,8 @@ import { CLUBINFO } from '../mock-data';
 export class ClubInfoService {
   constructor() {}
 
+  private showClubInfoForm: boolean = true;
+
   getClubInfo(): ClubInfo {
     return CLUBINFO;
   }
@@ -16,5 +18,6 @@ export class ClubInfoService {
     CLUBINFO.clubName = newInfo.clubName;
     CLUBINFO.clubEmail = newInfo.clubEmail;
     CLUBINFO.clubID = newInfo.clubID;
+    this.showClubInfoForm = false;
   }
 }
