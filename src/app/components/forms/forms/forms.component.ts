@@ -13,7 +13,7 @@ export class FormsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onBtnClick(): void {
-    this.state = this.stateService.toggleState('event');
+  onBtnClick(newState: string): void {
+    this.state = this.stateService.toggleState(newState);
   }
 }

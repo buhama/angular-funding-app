@@ -12,11 +12,5 @@ export class EventFormComponent implements OnInit {
 
   constructor(private stateService: StateService) {}
 
-  ngOnInit(): void {
-    this.toggleState();
-  }
-
-  toggleState(): void {
-    this.state = this.stateService.getState();
-  }
+  ngOnInit(): void {}
 }

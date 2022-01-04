@@ -8,13 +8,27 @@ import { StateService } from 'src/app/services/state.service';
 })
 export class FormButtonsComponent implements OnInit {
   state!: string;
+  @Input() type!: string;
+  text!: string;
+  clickText!: string;
   @Output() btnClick = new EventEmitter();
 
   constructor(private stateService: StateService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.type === 'editInfo') {
+      this.text = 'Edit Info';
+      this.clickText = 'editInfo';
+    } else if (this.type === 'addEvent') {
+      this.text = 'Add Event';
+      this.clickText = 'event';
+    } else if (this.type === 'addItem') {
+      this.text = 'Add Item';
+      this.clickText = 'item';
+    }
+  }
 
-  onClick() {
-    this.btnClick.emit();
+  onClick(newState: string) {
+    this.btnClick.emit(newState);
   }
 }
