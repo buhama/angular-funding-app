@@ -10,6 +10,8 @@ import { Input, Output, EventEmitter } from '@angular/core';
 })
 export class ClubInfoFormComponent implements OnInit {
   @Input() clubInfo!: ClubInfo;
+  @Input() state!: string;
+  @Output() btnClick = new EventEmitter();
   @Output() onAddInfo: EventEmitter<ClubInfo> = new EventEmitter();
   clubEmail!: string;
   clubName!: string;
@@ -18,11 +20,11 @@ export class ClubInfoFormComponent implements OnInit {
 
   constructor(private clubInfoService: ClubInfoService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('state ' + this.state);
+  }
 
   onSubmit() {
-    alert('submitting');
-
     const newInfo = {
       clubName: this.clubName,
       clubEmail: this.clubEmail,
@@ -36,5 +38,7 @@ export class ClubInfoFormComponent implements OnInit {
     this.clubID = 0;
 
     this.showForm = false;
+
+    this.btnClick.emit('buttons');
   }
 }
