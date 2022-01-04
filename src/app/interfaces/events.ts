@@ -1,7 +1,8 @@
 export interface Events {
+  id: number;
   eventName: string;
   eventDescription: string;
-  eventDate: Date;
+  eventDate: number;
   audience: number;
   bilingual: boolean;
   accessibilityComments: string;

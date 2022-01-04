@@ -8,7 +8,6 @@
             <h6>Event Description</h6>
         </div>
         <div class="col">
-            <h6>See More</h6>
         </div>
     </div>
     <div class="row" *ngFor="let event of events">
@@ -19,7 +18,7 @@
             <p>{{event.eventDescription}}</p>
         </div>
         <div class="col">
-            <p>See More</p>
+            <a routerLink="" (click)="onClick(event)"><p>Click here to edit</p></a>
         </div>
     </div>
 </div>

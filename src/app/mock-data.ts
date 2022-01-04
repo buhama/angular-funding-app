@@ -7,4 +7,15 @@ export const CLUBINFO: ClubInfo = {
   clubID: -1,
 };
 
-export const EVENTS: Events[] = [];
+export const EVENTS: Events[] = [
+  {
+    id: 1,
+    eventName: 'test event',
+    eventDescription: 'test description',
+    eventDate: Date.now(),
+    audience: 12,
+    bilingual: true,
+    accessibilityComments: 'accessibility comments',
+    sustainabilityComments: 'sustainability comments',
+  },
+];

@@ -29,7 +29,7 @@ export class EventFormComponent implements OnInit {
       id: EVENTS.length + 1,
       eventName: this.eventName,
       eventDescription: this.eventDescription,
-      eventDate: this.eventDate,
+      eventDate: 1,
       audience: this.audience,
       bilingual: this.bilingual,
       accessibilityComments: this.accessibilityComments,
