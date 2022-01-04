@@ -1,4 +1,5 @@
 import { ClubInfo } from './interfaces/club-info';
+import { Events } from './interfaces/events';
 
 export const CLUBINFO: ClubInfo = {
   clubName: '',
@@ -6,8 +7,4 @@ export const CLUBINFO: ClubInfo = {
   clubID: -1,
 };
 
-export const CLUBINFO2: ClubInfo = {
-  clubName: '',
-  clubEmail: '',
-  clubID: -1,
-};
+export const EVENTS: Events[] = [];

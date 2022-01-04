@@ -1,8 +1,9 @@
 <p style='background-color: red;'>forms works!</p>
 <app-club-info-form [state]='state' (btnClick)="onBtnClick('buttons')"></app-club-info-form>
+<app-event-form [state]='state' (btnClick)="onBtnClick('buttons')"></app-event-form>
+
 <div *ngIf="state==='buttons'">
     <app-form-buttons (btnClick)="onBtnClick('edit-info')" [type]='"editInfo"'></app-form-buttons>
     <app-form-buttons (btnClick)="onBtnClick('event')" [type]='"addEvent"'></app-form-buttons>
     <app-form-buttons (btnClick)="onBtnClick('item')" [type]='"addItem"'></app-form-buttons>
 </div>
-<app-event-form [state]='state'></app-event-form>

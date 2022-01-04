@@ -1,1 +1,15 @@
-<p *ngIf="state==='event'">event-form works! {{state}}</p>
+<div *ngIf="state==='event'" >
+    <h2>Add Club Info</h2>
+    <div class="form">
+        <form (ngSubmit)='onSubmit()'>
+            <label for="event-name" class='form-label'>Event Name</label>
+            <input type="text" class='form-control mb-3' id='event-name' name='event-name' [(ngModel)]='eventName' placeholder='Add your club name'>
+            <label for="event-description" class='form-label'>Event Description</label>
+            <input type="text" class='form-control mb-3' id='event-description' name='event-description' [(ngModel)]='eventDescription' placeholder='Add your club email'>
+            <label for="club-id" class='form-label'>Club ID</label>
+            <input type="date" class='form-control mb-3' id='event-date' name='event-date' [(ngModel)]='eventDate' placeholder='Add your club ID'>
+            <button type="submit" class='btn btn-primary'>Submit</button>
+        </form>
+    </div>
+</div>
+
