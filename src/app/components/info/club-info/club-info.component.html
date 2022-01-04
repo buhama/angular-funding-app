@@ -4,15 +4,15 @@
     <div class="row">
         <div class="col">
             <h6>Club Name</h6>
-            <p>{{clubInfo.clubName}}</p>
+            <p *ngIf="clubInfo">{{clubInfo.clubName}}</p>
         </div>
         <div class="col">
             <h6>Club Email</h6>
-            <p>{{clubInfo.clubEmail}}</p>
+            <p *ngIf="clubInfo">{{clubInfo.clubEmail}}</p>
         </div>
         <div class="col">
             <h6>Club ID</h6>
-            <p>{{clubInfo.clubID}}</p>
+            <p *ngIf="clubInfo">{{clubInfo.clubID}}</p>
         </div>
     </div>
 </div>

@@ -9,6 +9,7 @@ import { FormsComponent } from './components/forms/forms/forms.component';
 import { ClubInfoComponent } from './components/info/club-info/club-info.component';
 import { ClubInfoFormComponent } from './components/forms/club-info-form/club-info-form.component';
 import { FormButtonsComponent } from './components/forms/form-buttons/form-buttons.component';
+import { EventFormComponent } from './components/forms/event-form/event-form.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormButtonsComponent } from './components/forms/form-buttons/form-butto
     ClubInfoComponent,
     ClubInfoFormComponent,
     FormButtonsComponent,
+    EventFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],

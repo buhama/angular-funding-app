@@ -11,6 +11,7 @@ export class ClubInfoService {
   private showClubInfoForm: boolean = true;
 
   getClubInfo(): ClubInfo {
+    console.log('getting info');
     return CLUBINFO;
   }
 

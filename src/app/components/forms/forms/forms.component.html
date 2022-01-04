@@ -1,3 +1,4 @@
 <p style='background-color: red;'>forms works!</p>
 <app-club-info-form></app-club-info-form>
-<app-form-buttons></app-form-buttons>
+<app-form-buttons (btnClick)="onBtnClick()"></app-form-buttons>
+<app-event-form [state]='state'></app-event-form>
