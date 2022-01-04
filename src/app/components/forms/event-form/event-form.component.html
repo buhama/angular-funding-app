@@ -3,11 +3,31 @@
     <div class="form">
         <form (ngSubmit)='onSubmit()'>
             <label for="event-name" class='form-label'>Event Name</label>
-            <input type="text" class='form-control mb-3' id='event-name' name='event-name' [(ngModel)]='eventName' placeholder='Add your club name'>
+            <input type="text" class='form-control mb-3' id='event-name' name='event-name' [(ngModel)]='eventName' placeholder='Add your event name'>
+           
             <label for="event-description" class='form-label'>Event Description</label>
-            <input type="text" class='form-control mb-3' id='event-description' name='event-description' [(ngModel)]='eventDescription' placeholder='Add your club email'>
-            <label for="club-id" class='form-label'>Club ID</label>
+            <textarea type="textarea" class='form-control mb-3' id='event-description' name='event-description' [(ngModel)]='eventDescription' placeholder='Describe your event in great detail'></textarea>
+            
+            <label for="event-date" class='form-label'>Event Date</label>
             <input type="date" class='form-control mb-3' id='event-date' name='event-date' [(ngModel)]='eventDate' placeholder='Add your club ID'>
+            
+            <label for="target-audience" class='form-label'>Target Attendance</label>
+            <input type="number" class='form-control mb-3' id='target-audience' name='target-audience' [(ngModel)]='audience' placeholder='Add your club ID'>
+            
+            <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" id='bilingual' name='bilingual' [(ngModel)]='bilingual'>
+                <label class="form-check-label" for="bilingual" >Is your event bilingual? </label>
+            </div>
+
+            <!-- <label for="bilingual" class='form-label'>Is your event bilingual?</label>
+            <input type='checkbox' class='form-check-input mb-3' id='bilingual' name='bilingual' [(ngModel)]='bilingual' placeholder='Add your club ID'>
+            -->
+            <label for="accessibility" class='form-label'>Accessibility Comments</label>
+            <textarea class='form-control mb-3' id='accessibility' name='accessibility' [(ngModel)]='accessibilityComments' placeholder='Add accessibility comments here'></textarea>
+           
+            <label for="sustainability" class='form-label'>Club ID</label>
+            <textarea class='form-control mb-3' id='sustainability' name='sustainability' [(ngModel)]='sustainabilityComments' placeholder='Add sustainability comments here'></textarea>
+           
             <button type="submit" class='btn btn-primary'>Submit</button>
         </form>
     </div>

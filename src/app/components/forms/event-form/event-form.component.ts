@@ -39,5 +39,12 @@ export class EventFormComponent implements OnInit {
     this.eventsService.addEvent(newEvent);
 
     this.btnClick.emit('buttons');
+
+    this.eventName = '';
+    this.eventDescription = '';
+    this.audience = 0;
+    this.bilingual = false;
+    this.accessibilityComments = '';
+    this.sustainabilityComments = '';
   }
 }
