@@ -1,0 +1,25 @@
+<h3>Events</h3>
+<div class="info">
+    <div class="row">
+        <div class="col">
+            <h6>Event Name</h6>
+        </div>
+        <div class="col">
+            <h6>Event Description</h6>
+        </div>
+        <div class="col">
+            <h6>See More</h6>
+        </div>
+    </div>
+    <div class="row" *ngFor="let event of events">
+        <div class="col">
+            <p>{{event.eventName}}</p>
+        </div>
+        <div class="col">
+            <p>{{event.eventDescription}}</p>
+        </div>
+        <div class="col">
+            <p>See More</p>
+        </div>
+    </div>
+</div>
