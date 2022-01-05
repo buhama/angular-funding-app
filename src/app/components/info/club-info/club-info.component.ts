@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ClubInfo } from 'src/app/interfaces/club-info';
 import { ClubInfoService } from 'src/app/services/club-info.service';
 import { EventsService } from 'src/app/services/events.service';
@@ -10,6 +10,7 @@ import { EventsService } from 'src/app/services/events.service';
 })
 export class ClubInfoComponent implements OnInit {
   clubInfo!: ClubInfo;
+  @Output() editEvent = new EventEmitter();
 
   constructor(
     private clubInfoService: ClubInfoService,
@@ -25,7 +26,6 @@ export class ClubInfoComponent implements OnInit {
   }
 
   editClick(): void {
-    console.log('huh');
-    console.log('yo ' + this.eventsService.getSelectedEvent().eventName);
+    this.editEvent.emit();
   }
 }
